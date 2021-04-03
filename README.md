@@ -1,5 +1,7 @@
 # Unsupervised Learning and Dimensionality Reduction
 
+refer to https://github.com/cmaron/CS-7641-assignments
+
 ## Requirements
 ```
 pip install -r requirements.txt

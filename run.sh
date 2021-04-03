@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Replace 'X' below with the optimal values found
-# If you want to first generate data and updated datasets, remove the "--skiprerun" flags below
-
 python run_experiment.py --all
 python run_experiment2.py --all
 

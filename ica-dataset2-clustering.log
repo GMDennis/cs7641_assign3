@@ -1,0 +1,1707 @@
+/Users/dennis/miniconda3/lib/python3.7/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:47: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+2021-03-31 22:05:34,603 - __main__ - INFO - Using seed 3525903220
+2021-03-31 22:05:34,603 - __main__ - INFO - Loading data
+2021-03-31 22:05:34,603 - __main__ - INFO - ----------
+2021-03-31 22:05:35,392 - data.loader - INFO - Processing FMNIST Path: data/fmnist.csv, Dimensions: (7000, 785)
+2021-03-31 22:05:35,476 - data.loader - INFO - Data Sample:
+      0    1    2    3    4    5    6   ...   778  779  780  781  782  783  784
+0       0    0    0    0    1    2    3 ...     2    1    0    0    0    0    0
+1       0    0    0    0    0    0    0 ...     0    0    0    0    0    0    7
+2       0    0    0    0    0    0    0 ...     0    0    0    0    0    0    9
+3       0    0    0    0    0    0    0 ...     0    0    0    0    0    0    1
+4       0    0    1    1    0    0    1 ...   196  188  201  208  124    0    6
+...   ...  ...  ...  ...  ...  ...  ... ...   ...  ...  ...  ...  ...  ...  ...
+6995    0    0    0    0    0    0    0 ...     0    0    0    0    0    0    3
+6996    0    0    0    0    0    0    0 ...     0    0    0    0    0    0    7
+6997    0    0    0    0    0    0    0 ...     0    0    0    0    0    0    0
+6998    0    0    0    0    0    0    0 ...     0    0    0    0    0    0    7
+6999    0    0    0    2    2    0    0 ...    89   53   65   55   27    0    2
+
+[7000 rows x 785 columns]
+2021-03-31 22:05:35,477 - data.loader - INFO - Will pre-process data
+2021-03-31 22:05:35,477 - data.loader - INFO - Pulling features
+2021-03-31 22:05:35,508 - data.loader - INFO - Pulling classes
+2021-03-31 22:05:35,508 - data.loader - INFO - Feature dimensions: (7000, 784)
+2021-03-31 22:05:35,508 - data.loader - INFO - Classes dimensions: (7000,)
+2021-03-31 22:05:35,509 - data.loader - INFO - Class values: [0 1 2 3 4 5 6 7 8 9]
+2021-03-31 22:05:35,510 - data.loader - INFO - Class distribution: [669 713 702 687 691 703 721 705 701 708]
+2021-03-31 22:05:35,510 - data.loader - INFO - Class distribution (%): [ 9.55714286 10.18571429 10.02857143  9.81428571  9.87142857 10.04285714
+ 10.3        10.07142857 10.01428571 10.11428571]
+2021-03-31 22:05:35,510 - data.loader - INFO - Sparse? False
+2021-03-31 22:05:35,512 - data.loader - INFO - Binary? False
+2021-03-31 22:05:35,512 - data.loader - INFO - Balanced? True
+2021-03-31 22:05:35,944 - __main__ - INFO - ----------
+2021-03-31 22:05:35,945 - __main__ - INFO - Running experiments
+2021-03-31 22:05:35,945 - __main__ - INFO - Running with dimension 13
+2021-03-31 22:05:35,945 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.FMNISTData object at 0x7fe5a3670dd8>, ds_name=fmnist, ds_readable_name=Fashion MNIST, best_nn_params={'NN__activation': ['relu'], 'NN__learning_rate': ['adaptive'], 'NN__hidden_layer_sizes': [800]}, threads=-1, seed=3525903220)
+2021-03-31 22:05:35,945 - experiments.base - INFO - Running clustering for ICA with dim param 13
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   2 out of   5 | elapsed:   28.4s remaining:   42.6s
+[Parallel(n_jobs=-1)]: Done   3 out of   5 | elapsed:   32.7s remaining:   21.8s
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:   36.0s remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:   36.0s finished
+/Users/dennis/miniconda3/lib/python3.7/site-packages/scipy/linalg/basic.py:1321: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
+  x, resids, rank, s = lstsq(a, b, cond=cond, check_finite=False)
+2021-03-31 22:06:48,111 - numexpr.utils - INFO - NumExpr defaulting to 4 threads.
+2021-03-31 22:06:48,508 - experiments.base - INFO - Running clustering sub-experiment
+2021-03-31 22:06:48,508 - data.loader - INFO - Reloading from HDF ./output/ICA/datasets.hdf
+2021-03-31 22:06:48,622 - data.loader - INFO - Processing FMNIST Path: data/fmnist.csv, Dimensions: (4900, 14)
+2021-03-31 22:06:48,664 - data.loader - INFO - Data Sample:
+             0         1         2  ...          11        12  Class
+0     0.011973 -0.006960 -0.010334  ...   -0.001683 -0.001277    6.0
+1     0.003317  0.012331  0.001175  ...   -0.002177  0.000265    1.0
+2    -0.012390  0.017268 -0.009146  ...   -0.006070 -0.003384    3.0
+3     0.000359 -0.000471  0.003539  ...    0.003953  0.002704    9.0
+4    -0.052029 -0.020127 -0.009252  ...   -0.002424 -0.001115    0.0
+...        ...       ...       ...  ...         ...       ...    ...
+4895 -0.032061 -0.015448  0.026790  ...    0.002026  0.009095    0.0
+4896 -0.001525 -0.012147 -0.005255  ...    0.000310 -0.001450    1.0
+4897  0.002103 -0.004582 -0.001579  ...   -0.004868  0.007676    7.0
+4898  0.001503  0.005678  0.000915  ...    0.002517 -0.004638    7.0
+4899  0.001289 -0.012253 -0.006687  ...    0.051496  0.000781    8.0
+
+[4900 rows x 14 columns]
+2021-03-31 22:06:48,664 - data.loader - INFO - Pulling features
+2021-03-31 22:06:48,665 - data.loader - INFO - Pulling classes
+2021-03-31 22:06:48,665 - data.loader - INFO - Feature dimensions: (4900, 13)
+2021-03-31 22:06:48,665 - data.loader - INFO - Classes dimensions: (4900,)
+2021-03-31 22:06:48,667 - data.loader - INFO - Class values: [0. 1. 2. 3. 4. 5. 6. 7. 8. 9.]
+2021-03-31 22:06:48,669 - data.loader - INFO - Class distribution: [468 499 491 481 484 492 505 493 491 496]
+2021-03-31 22:06:48,670 - data.loader - INFO - Class distribution (%): [ 9.55102041 10.18367347 10.02040816  9.81632653  9.87755102 10.04081633
+ 10.30612245 10.06122449 10.02040816 10.12244898]
+2021-03-31 22:06:48,671 - data.loader - INFO - Sparse? False
+2021-03-31 22:06:48,673 - data.loader - INFO - Binary? False
+2021-03-31 22:06:48,673 - data.loader - INFO - Balanced? True
+2021-03-31 22:06:48,677 - experiments.base - INFO - Performing clustering as part of ICA
+2021-03-31 22:06:50,034 - experiments.base - INFO - Cluster: 2, time: 2.119467
+2021-03-31 22:06:51,581 - experiments.base - INFO - Cluster: 3, time: 4.426562000000004
+2021-03-31 22:06:53,374 - experiments.base - INFO - Cluster: 4, time: 6.980316999999999
+2021-03-31 22:06:56,946 - experiments.base - INFO - Cluster: 5, time: 9.515061000000003
+2021-03-31 22:07:00,263 - experiments.base - INFO - Cluster: 6, time: 11.856842
+2021-03-31 22:07:04,496 - experiments.base - INFO - Cluster: 7, time: 14.116554999999998
+2021-03-31 22:07:06,378 - experiments.base - INFO - Cluster: 8, time: 16.591617
+2021-03-31 22:07:08,212 - experiments.base - INFO - Cluster: 9, time: 19.290234000000005
+2021-03-31 22:07:09,986 - experiments.base - INFO - Cluster: 10, time: 22.058487000000007
+2021-03-31 22:07:12,672 - experiments.base - INFO - Cluster: 15, time: 25.935162
+2021-03-31 22:07:16,306 - experiments.base - INFO - Cluster: 20, time: 30.806959
+2021-03-31 22:07:21,061 - experiments.base - INFO - Cluster: 25, time: 35.602529
+2021-03-31 22:07:30,598 - experiments.base - INFO - Cluster: 30, time: 44.621889
+2021-03-31 22:07:39,741 - experiments.base - INFO - Cluster: 35, time: 51.544812
+2021-03-31 22:07:49,253 - experiments.base - INFO - Cluster: 40, time: 59.903665
+[CV] NN__activation=relu, NN__hidden_layer_sizes=800, NN__learning_rate=adaptive 
+[CV]  NN__activation=relu, NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, score=0.7298284019829793, total=  30.3s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=2, score=0.14066135946111452, total=   1.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=3, score=0.14927536231884056, total=   1.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=3, score=0.23811594202898548, total=   1.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=4, score=0.31076925320036164, total=   3.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=5, score=0.335105837273261, total=   2.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=5, score=0.20585007916209958, total=   1.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=6, score=0.36719155512786866, total=   2.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=6, score=0.34084033613445375, total=   2.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=7, score=0.41240281057263917, total=   2.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=8, score=0.46072652687418003, total=   3.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=8, score=0.3841404777355459, total=   3.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=9, score=0.450528920698215, total=   3.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=10, score=0.4538005612532827, total=   2.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6871886515559295, total=   8.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=20, score=0.4854703240757417, total=   2.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6780726059838843, total=   8.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6334828945774157, total=   6.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=30, score=0.6952568889271457, total=   6.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=30, score=0.6711075828524392, total=   8.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=35, score=0.6014267299292302, total=   5.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=40, score=0.7014772701932747, total=  10.2s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=2, score=0.22278127417531618, total=   3.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=2, score=0.19034376763565192, total=   4.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=3, score=0.15864462135129617, total=   2.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=4, score=0.2324223602484472, total=   2.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=4, score=0.3961163911478833, total=   6.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=5, score=0.5183056948214904, total=   8.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=6, score=0.554413176320273, total=  22.5s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=8, score=0.5524104574747564, total=   7.0s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=8, score=0.5954392696029143, total=  17.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=10, score=0.5382002721929372, total=   4.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6413155436387105, total=  10.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6116738886439617, total=   7.2s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6968954749967682, total=  13.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=25, score=0.7184742212868, total=  12.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=30, score=0.6884410986096429, total=  12.2s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=35, score=0.7024657072092324, total=   9.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=35, score=0.6983330117351187, total=  16.0s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=40, score=0.669377914396428, total=   7.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=2, score=0.19416703117254253, total=   2.4s[CV] NN__activation=relu, NN__hidden_layer_sizes=800, NN__learning_rate=adaptive 
+[CV]  NN__activation=relu, NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, score=0.6976175546047695, total=  18.8s
+[CV] NN__activation=relu, NN__hidden_layer_sizes=800, NN__learning_rate=adaptive 
+[CV]  NN__activation=relu, NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, score=0.7258538985481826, total=  14.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=2, score=0.1956168897442627, total=   1.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=3, score=0.15942028985507242, total=   1.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=4, score=0.2583374072225338, total=   1.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=4, score=0.1679308245037145, total=   1.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=5, score=0.5011244000990865, total=   7.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=7, score=0.32841075438136064, total=   3.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=7, score=0.49645657634091417, total=   6.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=9, score=0.38916578756426023, total=   2.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=9, score=0.46468904712146464, total=   3.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=10, score=0.3637167935147115, total=   1.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6531508941618878, total=   5.7s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6078843353844309, total=   7.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6782453146985346, total=   8.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=25, score=0.5988871540709483, total=   5.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6716416875740461, total=   7.3s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=30, score=0.6698865723097505, total=   8.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=35, score=0.6694707041277395, total=   9.7s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=40, score=0.6108826839261272, total=   5.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=2, score=0.19537544105210974, total=   4.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=2, score=0.21067592254293016, total=   5.0s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=3, score=0.2610236813739123, total=   6.6s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=5, score=0.3769826632428844, total=   3.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=5, score=0.5074772837808574, total=   7.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=6, score=0.2998136645962733, total=   6.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=7, score=0.5387441809658229, total=  15.0s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=7, score=0.3582139812446717, total=   3.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=8, score=0.5247534201566837, total=   7.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=9, score=0.4574908164011582, total=   3.5s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=9, score=0.5121411114238538, total=   8.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6064310243387004, total=  12.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6455332264843809, total=  10.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6979235445221901, total=   8.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6824487774443875, total=  10.5s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6343027261321341, total=   6.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7037041274228335, total=   9.6s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7145901062965995, total=  12.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=35, score=0.711848006112044, total=  15.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=40, score=0.7112031446214293, total=  11.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=2, score=0.23108797713819149, total=   3.2s[CV] NN__activation=relu, NN__hidden_layer_sizes=800, NN__learning_rate=adaptive 
+[CV]  NN__activation=relu, NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, score=0.7464867843350849, total=  29.7s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=2, score=0.21333630532031111, total=   2.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=3, score=0.1598568992814517, total=   1.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=4, score=0.28788819875776395, total=   1.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=5, score=0.39043740705100166, total=   4.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=6, score=0.2752243898171639, total=   2.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=6, score=0.3433011958839344, total=   2.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=7, score=0.5362015867973866, total=   5.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=8, score=0.3285160236783017, total=   1.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=8, score=0.43655634939045246, total=   4.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=9, score=0.5660329685710453, total=   5.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6264368548733305, total=   7.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6389689833902911, total=   6.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6509216522429867, total=   8.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6255188791435309, total=   6.3s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=30, score=0.6722386385109889, total=   9.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=35, score=0.6726867186222036, total=   8.3s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=40, score=0.7167196615327086, total=   9.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=40, score=0.6655256341042881, total=   5.2s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=3, score=0.30579117501256475, total=   4.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=3, score=0.23801242236024844, total=   2.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=4, score=0.28842969153368636, total=   3.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=4, score=0.3358980231637405, total=   6.2s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=5, score=0.33557572861920687, total=   3.5s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=6, score=0.3152995981001096, total=   2.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=6, score=0.4888412221761164, total=  14.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=7, score=0.5713127833107301, total=  11.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=8, score=0.5731283926815697, total=   9.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=9, score=0.5980512701158223, total=   9.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=9, score=0.611213490737482, total=  11.0s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=15, score=0.665180104887248, total=   9.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6435397161909738, total=   8.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=20, score=0.7090179376298016, total=  12.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6281315813646579, total=   5.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6911695953777107, total=  14.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=30, score=0.6896324062495761, total=   9.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=35, score=0.6998751872065988, total=  21.5s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=40, score=0.7070221844041364, total=  15.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=3, score=0.3341059900393057, total=   4.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=3, score=0.2680422603824138, total=   3.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=4, score=0.38679176976140334, total=   8.9s[CV] NN__activation=relu, NN__hidden_layer_sizes=800, NN__learning_rate=adaptive 
+[CV]  NN__activation=relu, NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, score=0.7246952667951279, total=  25.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=2, score=0.1524188609920392, total=   1.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=2, score=0.10894957983193276, total=   1.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=3, score=0.22213046394307875, total=   0.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=4, score=0.3170305550266647, total=   2.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=5, score=0.49697584094039554, total=   6.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=6, score=0.4013017538499438, total=   3.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=7, score=0.48906856437159335, total=   5.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=8, score=0.4428599442080075, total=   2.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=9, score=0.4246093198733594, total=   3.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=10, score=0.49789958381615734, total=   3.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6095288837843328, total=   4.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6447553783116908, total=   8.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6151210085960732, total=   4.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=25, score=0.7100099917493022, total=  10.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=30, score=0.6703833167181029, total=   8.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=35, score=0.7113344088400823, total=   9.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=35, score=0.6925063456221603, total=   9.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, km__n_clusters=40, score=0.652016877334471, total=   7.5s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=2, score=0.21368530020703935, total=   3.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=3, score=0.3072086225794665, total=   4.0s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=4, score=0.4329747850004175, total=  11.2s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=5, score=0.3965212029003684, total=   4.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5674425964665304, total=  16.6s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=7, score=0.41225225716503344, total=   3.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=7, score=0.5522336499118192, total=  10.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=8, score=0.17886554621848738, total=   2.0s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=9, score=0.5587318555992234, total=  11.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=10, score=0.616631974283896, total=   8.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=10, score=0.5940250106931405, total=   8.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6568725414007398, total=   9.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6727186760791889, total=  12.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6791375042473706, total=   9.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7260798028502722, total=  14.5s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=35, score=0.7200943512738838, total=  13.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=40, score=0.6785776419346896, total=   9.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, km__n_clusters=40, score=0.6941188285012382, total=  13.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=2, score=0.19919254658385094, total=   5.3s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=3, score=0.3491794890867331, total=   6.6s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=4, score=0.41993456827144365, total=  13.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=5, score=0.3139474528329397, total=   3.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=2, score=0.18309859154929578, total=   2.6s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=2, score=0.21049035058539958, total=   6.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=3, score=0.3657065365955697, total=   8.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=4, score=0.42639375792592993, total=  11.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=5, score=0.2534575569358178, total=   3.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5221783331157993, total=  17.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=7, score=0.5732645181616814, total=  16.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=8, score=0.6066786141388034, total=  10.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=9, score=0.5838702766081102, total=  15.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6333559584274615, total=  12.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6036660952006219, total=  10.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=15, score=0.712883831314186, total=  14.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6805472245305049, total=  11.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6944977544754237, total=  11.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=30, score=0.6856509935994364, total=  15.1s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=35, score=0.7266142378568083, total=  21.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=40, score=0.7166808476995431, total=  14.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=40, score=0.6679548877405502, total=   8.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=2, score=0.20807453416149066, total=   5.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=3, score=0.2621303693443633, total=   5.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=4, score=0.431594221075841, total=   9.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=5, score=0.5288900690822451, total=  15.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5295734275450424, total=  14.5s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=7, score=0.5567808143131437, total=  11.6s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=7, score=0.6111201573426256, total=  18.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=8, score=0.6192791886384663, total=  17.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=9, score=0.5995846936588243, total=  15.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6270755270610215, total=  19.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6679575344027273, total=  13.6s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=15, score=0.7176006843610002, total=  27.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=20, score=0.7134104973292668, total=  23.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6725557766256977, total=  23.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=30, score=0.6970361424371265, total=  16.5s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=35, score=0.7183463440489484, total=  16.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=35, score=0.7208228335011936, total=  21.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=40, score=0.6824912857370772, total=  12.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=2, score=0.2665150407989283, total=  14.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=3, score=0.3774067005127813, total=  21.0s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=4, score=0.4578589011604242, total=  19.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=5, score=0.5517354653833323, total=  21.0s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=6, score=0.4875096358200353, total=  15.6s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=3, score=0.40642409443875527, total=  17.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=4, score=0.3862435112316778, total=   7.6s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=5, score=0.527329509881111, total=  15.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5183185999403506, total=  15.3s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=7, score=0.5366576003935243, total=  11.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=8, score=0.5549269958070584, total=   8.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=9, score=0.653026453145368, total=  14.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6209431533009574, total=  14.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=15, score=0.7036004198483936, total=  13.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=20, score=0.623817967091084, total=   4.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6899990128333068, total=  11.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6936995997530562, total=  11.3s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7293567301663191, total=  24.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=35, score=0.6641135764280363, total=  12.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=35, score=0.6730533569190666, total=  13.1s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=40, score=0.7071416085028331, total=  10.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=2, score=0.22753623188405794, total=   3.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=3, score=0.44159566560020425, total=  12.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=4, score=0.3749515666097717, total=  10.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=5, score=0.4965015346183225, total=  10.5s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=6, score=0.49805800547686657, total=  15.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5753121942632191, total=  12.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=7, score=0.5725597707759786, total=  17.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=8, score=0.5944845116202523, total=  12.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=9, score=0.5450080674701545, total=   8.5s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6208114719472381, total=  11.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6340688450838845, total=  26.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6881588565168881, total=  32.6s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6898132375812328, total=  24.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6908010490284184, total=  21.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7124072568402744, total=  15.8s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7043073578455492, total=  22.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=40, score=0.6574936809885118, total=   8.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=40, score=0.6693841682973919, total=   9.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=2, score=0.29408529609026707, total=  14.1s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=2, score=0.20461027889416633, total=   5.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=3, score=0.37592802338326636, total=  11.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=4, score=0.4863544781047752, total=  29.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=5, score=0.560320880565108, total=  26.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=5, score=0.28199549384971373, total=   4.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5139767650752352, total=  12.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=4, score=0.22922790141364782, total=   3.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=5, score=0.3248033126293996, total=   2.6s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5045122568316978, total=  12.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=6, score=0.3681689197418097, total=   5.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=7, score=0.3812122007406759, total=   5.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=7, score=0.47518418768695514, total=   8.3s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=8, score=0.5827917898774496, total=  11.1s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=9, score=0.6057055523874083, total=  11.1s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=9, score=0.6254779313013079, total=  16.3s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6211925106487461, total=  11.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6428171605221176, total=   7.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6950246000532374, total=  11.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=25, score=0.7124629728303947, total=  10.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=25, score=0.686582584813489, total=  11.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7173626338670046, total=  17.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=35, score=0.7009749031272031, total=  17.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=40, score=0.7171112944426226, total=  17.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=2, score=0.23781908844370572, total=   5.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=3, score=0.3151967559834712, total=   4.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=3, score=0.29219461697722565, total=   3.5s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=4, score=0.3933673341295545, total=   9.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=5, score=0.4956620526070473, total=  23.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5119940124005475, total=  11.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=7, score=0.6048887808755968, total=  17.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=8, score=0.48959915503249674, total=   7.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=8, score=0.6214995151935115, total=  17.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=9, score=0.6383077635996233, total=  11.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6512359501502545, total=  26.6s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=15, score=0.7194558687473207, total=  27.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=20, score=0.7237421662424364, total=  28.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=25, score=0.7166977397205054, total=  28.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=25, score=0.680725132662759, total=  13.8s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=30, score=0.722017572266265, total=  18.5s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=35, score=0.6926846628311746, total=  20.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=40, score=0.6974874733391111, total=  15.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=2, score=0.19292887761350713, total=   6.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=3, score=0.32181957902573155, total=   8.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=3, score=0.3390280438980027, total=  14.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=4, score=0.42818659293240835, total=  15.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=4, score=0.39364152020314935, total=  22.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=5, score=0.558427115567437, total=  27.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=5, score=0.3736910078762199, total=   6.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5215554613556078, total=  12.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=7, score=0.5254391332884543, total=  10.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=8, score=0.5996827598155, total=  11.1s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=8, score=0.5924293878685603, total=  11.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=9, score=0.5456797341808984, total=  11.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6326114273544579, total=  13.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6588021409086933, total=   9.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6463032467017655, total=   7.6s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6842293193935813, total=  13.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6788277086757185, total=  10.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7141870832840178, total=  14.1s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=30, score=0.6970762702325476, total=  16.1s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=35, score=0.679955141942965, total=  14.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, km__n_clusters=40, score=0.6884630766061981, total=  13.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=2, score=0.21654042756110403, total=   4.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=2, score=0.19803312629399586, total=   3.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=3, score=0.2635549872122762, total=   4.5s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=4, score=0.25848069662647666, total=   3.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=4, score=0.4480652339172776, total=  14.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=5, score=0.48021046505758497, total=   9.8s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=5, score=0.3662041636901353, total=   5.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5507310143025556, total=  15.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=7, score=0.5861654241487891, total=  16.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=8, score=0.5635318210120991, total=  11.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=9, score=0.6391024251375104, total=  16.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=9, score=0.6231251739951209, total=  20.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6518462058611694, total=  21.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=15, score=0.7014123803567252, total=  19.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6852335948575277, total=  20.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6956149531144759, total=  28.6s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6370975852029027, total=   9.5s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7199042000589135, total=  18.8s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=35, score=0.715697614346078, total=  16.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=35, score=0.7235230553060839, total=  16.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, km__n_clusters=40, score=0.701509303067306, total=  13.1s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=2 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=2, score=0.31001141078822, total=  17.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=3 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=3, score=0.33183309444179004, total=   8.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=4 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=4, score=0.4381491522178097, total=  23.5s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=5 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=5, score=0.4931940437478783, total=  34.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5207172586787875, total=  16.5s[Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   5 tasks      | elapsed:    2.3s
+[Parallel(n_jobs=-1)]: Done  10 tasks      | elapsed:    3.4s
+[Parallel(n_jobs=-1)]: Done  17 tasks      | elapsed:    9.6s
+[Parallel(n_jobs=-1)]: Done  24 tasks      | elapsed:   15.4s
+[Parallel(n_jobs=-1)]: Done  33 tasks      | elapsed:   23.6s
+[Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:   32.2s
+[Parallel(n_jobs=-1)]: Done  53 tasks      | elapsed:   52.4s
+[Parallel(n_jobs=-1)]: Done  64 tasks      | elapsed:  1.2min
+[Parallel(n_jobs=-1)]: Done  77 tasks      | elapsed:  1.6min
+[Parallel(n_jobs=-1)]: Done  90 tasks      | elapsed:  1.9min
+[Parallel(n_jobs=-1)]: Done 105 tasks      | elapsed:  2.5min
+[Parallel(n_jobs=-1)]: Done 120 tasks      | elapsed:  3.0min
+[Parallel(n_jobs=-1)]: Done 137 tasks      | elapsed:  3.8min
+[Parallel(n_jobs=-1)]: Done 154 tasks      | elapsed:  4.5min
+[Parallel(n_jobs=-1)]: Done 173 tasks      | elapsed:  5.2min
+[Parallel(n_jobs=-1)]: Done 192 tasks      | elapsed:  6.2min
+[Parallel(n_jobs=-1)]: Done 213 tasks      | elapsed:  7.3min
+[Parallel(n_jobs=-1)]: Done 234 tasks      | elapsed:  8.1min
+[Parallel(n_jobs=-1)]: Done 257 tasks      | elapsed:  9.3min
+[Parallel(n_jobs=-1)]: Done 280 tasks      | elapsed: 11.4min
+[Parallel(n_jobs=-1)]: Done 305 tasks      | elapsed: 13.0min
+[Parallel(n_jobs=-1)]: Done 330 tasks      | elapsed: 15.1min
+[Parallel(n_jobs=-1)]: Done 357 tasks      | elapsed: 17.9min
+[Parallel(n_jobs=-1)]: Done 375 out of 375 | elapsed: 20.5min finished
+2021-03-31 22:28:48,524 - experiments.base - INFO - KMmeans Grid search complete
+
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=7, score=0.6211455721853402, total=  25.1s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=8, score=0.609663358746605, total=  17.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=8, score=0.6106290510014217, total=  20.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=9, score=0.6487817256936236, total=  23.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6264754589694252, total=  20.1s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=15, score=0.7135553583455316, total=  22.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=15, score=0.7172510910219426, total=  36.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6983813479467561, total=  36.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6725711917073524, total=  24.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=30, score=0.6974654391582038, total=  34.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=35, score=0.6970648965481644, total=  24.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=40, score=0.726764893008364, total=  48.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=2, score=0.19560893922786507, total=   1.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=2, score=0.19714285714285715, total=   1.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=3, score=0.2897124777651416, total=   1.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3769408000354291, total=   1.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3783649981731823, total=   1.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=5, score=0.3769854501976502, total=   1.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=6, score=0.4581128784564292, total=   1.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=7, score=0.47518108099144957, total=   2.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=8, score=0.4937147507224233, total=   1.3s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5279684680196189, total=   2.3s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=9, score=0.46321820466818, total=   1.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5365679445225001, total=   2.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5223425633419144, total=   3.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6191018614204017, total=   2.3s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6330649288617758, total=   2.7s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6360235235852566, total=   3.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6464613169211347, total=   3.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6830936524762152, total=   7.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=35, score=0.686040547802009, total=   7.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=2, score=0.14968360889977544, total=   0.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=2, score=0.1985714285714286, total=   0.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=2, score=0.20144927536231885, total=   0.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=2, score=0.18831932773109245, total=   0.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=3, score=0.28840579710144926, total=   0.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=3, score=0.2855486542443064, total=   1.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3622993287945919, total=   1.2s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=5, score=0.4340198292755837, total=   4.6s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=6, score=0.44164363769223103, total=   2.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=7, score=0.5576866749594677, total=  19.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=7, score=0.6260747246035638, total=  26.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=8, score=0.4710480564211907, total=   7.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=9, score=0.6331565803407595, total=  26.1s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6636608787032042, total=  27.1s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6043140813456116, total=  15.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6883748505438632, total=  26.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6982093958777076, total=  27.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=25, score=0.719660229064069, total=  31.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6954126056153005, total=  27.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7205463750917429, total=  35.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=35, score=0.735009312365689, total=  47.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=40, score=0.6928487068488263, total=  36.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=2, score=0.20144927536231885, total=   1.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=3, score=0.28127046866177297, total=   2.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=3, score=0.288259269264537, total=   2.3s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=5, score=0.43097001446016253, total=   1.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=5, score=0.36912197746659764, total=   0.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=6, score=0.44456350128984395, total=   1.7s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=7, score=0.5050541698614535, total=   1.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=7, score=0.4893897296351776, total=   2.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5249011826564599, total=   2.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5294666799526135, total=   1.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5616035921681606, total=   2.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5785357597702523, total=   3.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6185392943571684, total=   3.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6458538708029, total=   4.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6650185270344846, total=   4.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6793183241119194, total=   5.7s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6683192934738913, total=   5.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6782989631727097, total=   5.2s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=2, score=0.1956935817805383, total=   0.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=3, score=0.2797553171466215, total=   1.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=3, score=0.288345793166765, total=   1.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=4, score=0.36813664596273293, total=   1.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=5, score=0.3819686747938612, total=   2.0s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=5, score=0.3658095619818335, total=   1.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=6, score=0.41204581697901543, total=   5.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=7, score=0.4530890208335185, total=   1.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=7, score=0.47427130738483175, total=   2.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5032506756009447, total=  15.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=7, score=0.6059847602924061, total=  30.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=8, score=0.6334600195280888, total=  28.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=9, score=0.6083293965517121, total=  19.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6401206436538028, total=  22.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=15, score=0.6634872343414903, total=  17.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=20, score=0.7253867964822182, total=  28.5s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=20, score=0.69851249193086, total=  39.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=25, score=0.6268998930093067, total=  17.0s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7014598323881132, total=  28.1s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=35, score=0.6970645449072018, total=  22.0s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=35, score=0.7381514171085497, total=  53.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=40, score=0.7276846886111306, total=  29.7s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=2, score=0.19714285714285715, total=   1.3s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=3, score=0.2884923771880294, total=   2.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3637077794988173, total=   1.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=4, score=0.36637349353958115, total=   1.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=6, score=0.44723320158102764, total=   0.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=6, score=0.42135034959060613, total=   1.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=7, score=0.41028094241649227, total=   2.0s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=8, score=0.4398148567449025, total=   1.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=8, score=0.4515987814783479, total=   1.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5248948234863727, total=   1.3s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=9, score=0.547002544541003, total=   2.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5619195064837694, total=   1.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5823792916376037, total=   3.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=15, score=0.600141489231843, total=   2.7s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6339764423714874, total=   2.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6578037673413099, total=   3.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6469044549389708, total=   4.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6485908234027898, total=   6.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6958808263048024, total=   6.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=40, score=0.7096842758468135, total=   5.0s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=4, score=0.36572799113521703, total=   1.5s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=4, score=0.37832298136645964, total=   2.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=5, score=0.38672327228503156, total=   1.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=6, score=0.463266021768057, total=   1.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=6, score=0.4564723416446896, total=   4.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=7, score=0.5029718730201611, total=   3.2s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=8, score=0.49845570356206725, total=   2.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=6 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=6, score=0.5951499822212116, total=  19.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=7 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=7, score=0.5553796634712388, total=  23.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=8 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=8, score=0.5594643899980523, total=  14.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=9, score=0.5937474408568749, total=  19.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=9 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=9, score=0.6297383980298054, total=  19.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=10 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=10, score=0.6999415383384923, total=  28.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=15 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=15, score=0.7320629812350239, total=  38.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=20 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=20, score=0.6782654096930542, total=  21.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=25 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=25, score=0.7069368314046098, total=  27.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7083924869842163, total=  29.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=30 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=30, score=0.7016587644392355, total=  25.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=35 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=35, score=0.6850913310042057, total=  32.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=40, score=0.7172473311542509, total=  32.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=40 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, km__n_clusters=40, score=0.7319661780750836, total=  33.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=2, score=0.2, total=   1.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=3, score=0.28836438923395447, total=   2.1s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3724460846846165, total=   1.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=5, score=0.36357508220679574, total=   1.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=5, score=0.37124129989438986, total=   1.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=6, score=0.41365009848595763, total=   2.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=7, score=0.47264756708853356, total=   1.7s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5180636542269553, total=   1.9s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5236983001582539, total=   1.7s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5298900587903145, total=   2.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5762449485723142, total=   4.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6267786402184439, total=   3.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6616706142458096, total=   3.4s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6538099341968104, total=   3.8s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6569807401820609, total=   3.5s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=35, score=0.680271589420898, total=   6.2s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6935706153529719, total=   5.6s
+[CV] NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=100, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6776491443180377, total=   4.2s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=3, score=0.29261102848977927, total=   2.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3661776884666909, total=   2.2s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=5, score=0.37125046054961697, total=   2.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=6, score=0.4187708557554342, total=   2.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=7, score=0.4118381107383665, total=   4.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5025809058801386, total=   1.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=8, score=0.45164079828507053, total=   3.0s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=9, score=0.49832512876544643, total=   1.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=7, score=0.5079740334590663, total=   4.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5219571049485318, total=   2.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5265411144695031, total=   2.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=9, score=0.4628333278102336, total=   1.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5725932117893567, total=   4.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5837211276463864, total=   5.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6468366495960963, total=   5.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6268180611235159, total=   4.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6622413885436369, total=   5.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6553748073954909, total=   7.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=35, score=0.676884097921487, total=  10.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6943560190874769, total=   6.3s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=2, score=0.20149068322981367, total=   1.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=2, score=0.20140845070422533, total=   1.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=2, score=0.20289855072463772, total=   1.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=2, score=0.19714285714285715, total=   3.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=3, score=0.28380094412846246, total=   1.3s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3623206416675672, total=   3.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=5, score=0.4244029393753827, total=   1.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=5, score=0.3741283073405072, total=   3.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=6, score=0.41362299684512155, total=   6.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=7, score=0.4984483368548338, total=   5.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=8, score=0.4486776727363436, total=   3.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5367411786849127, total=   3.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5509464803242716, total=   6.1s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5633242474846475, total=   5.1s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=15, score=0.6027082547689869, total=   4.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=20, score=0.646774537794854, total=   8.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=20, score=0.5972842100450222, total=   4.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=25, score=0.643124312461738, total=   9.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6611014260405492, total=   6.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=35, score=0.7056683244471869, total=  19.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6967386340549298, total=   8.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6865128909847771, total=  15.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=2, score=0.2, total=   7.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3828268915983696, total=   8.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3725514841667993, total=   4.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=5, score=0.3898639858296082, total=  10.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=6, score=0.40838365646263497, total=  12.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=7, score=0.49540054148749807, total=   4.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5051482574760049, total=   2.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5296677806549165, total=   1.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5558271946526326, total=   1.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5762875743182648, total=   7.5s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6186221358219846, total=   6.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6240758259547209, total=   5.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6618761571418363, total=   5.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6510098100039696, total=   5.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6647624793946972, total=  11.0s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6950162885395765, total=   5.4s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=40, score=0.7087366727252973, total=   6.6s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=3, score=0.28552795031055905, total=   4.3s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3709151600061107, total=   2.6s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=4, score=0.37070122463201816, total=   2.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=5, score=0.3697493987861205, total=   3.3s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=6, score=0.38715920521829655, total=   2.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=6, score=0.46090605542871066, total=   5.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=7, score=0.47275291357495425, total=   3.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5208774532188056, total=   4.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=9, score=0.534082180570191, total=   4.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5343018234961969, total=   5.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=15, score=0.580740746891642, total=   8.3s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6200305865262099, total=  12.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6570668972371, total=   6.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6604872296844658, total=  11.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6860787271030809, total=  20.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=40, score=0.7085532750092745, total=  11.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=2, score=0.2029399585921325, total=   6.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=2, score=0.1985714285714286, total=   4.8s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=2, score=0.1873239436619719, total=   3.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=3, score=0.2884515525299359, total=   4.6s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=3, score=0.2913302315884672, total=   8.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=4, score=0.363769917029886, total=   3.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=5, score=0.43233583941843734, total=   7.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=6, score=0.46897773527938147, total=   5.8s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=6, score=0.46252464316231157, total=   8.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=7, score=0.4103053849720036, total=   6.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=8, score=0.49075287031808773, total=   3.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5234537886436957, total=   6.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=9, score=0.464625463223776, total=   4.5s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5353126072563412, total=   2.5s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5308751306568388, total=   2.2s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5647948357199416, total=   5.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5812570980571133, total=   3.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6253719906020756, total=   6.6s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6571327733899326, total=   5.3s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6749692801465071, total=   7.0s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6927101234080449, total=  11.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6786707709590101, total=   6.5s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6823583524159926, total=   7.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=3, score=0.275320302033857, total=   2.3s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=3, score=0.2914620162446249, total=   4.1s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3783442942394349, total=   1.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=5, score=0.3969322748862391, total=   2.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=6, score=0.4704056977687251, total=   4.6s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=7, score=0.502175130921934, total=   3.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=7, score=0.4708503293965908, total=   5.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5010463790259186, total=   3.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5323187041336603, total=   4.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5294666799526135, total=   4.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=10, score=0.561000601808137, total=   5.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=15, score=0.582165895205938, total=   7.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6200181579726491, total=   8.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6347264498406389, total=   9.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6748071222031093, total=   7.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6487711186905751, total=  14.3s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6858696075302132, total=   9.6s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6908942720883933, total=   7.5s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6962705038087714, total=  13.6s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=2, score=0.2014705882352941, total=   5.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=3, score=0.2753446354092542, total=  10.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3754658385093168, total=   2.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=5, score=0.37621118012422355, total=   5.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=5, score=0.37065278285227127, total=   5.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=6, score=0.42427215072212593, total=  10.6s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=7, score=0.4694838682331525, total=   3.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5234276931838259, total=   5.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5337271548378858, total=   9.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5280174045902947, total=   4.8s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5669295424454412, total=   7.6s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5240077058491381, total=   2.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5873025652948927, total=   6.8s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=15, score=0.6110312319406871, total=   4.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=20, score=0.627310453158451, total=   4.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6095848122892318, total=   4.7s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6626619657493906, total=   5.1s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=30, score=0.67273177897925, total=  10.5s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6565570233484499, total=   6.9s
+[CV] NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=200, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6886766949357979, total=   7.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=2, score=0.19714285714285715, total=   1.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=3, score=0.2942279500454638, total=   3.7s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=4, score=0.38411106724045735, total=   4.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=5, score=0.38497077091706244, total=   5.0s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=6, score=0.44456350128984395, total=   4.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=7, score=0.4061436985861538, total=   5.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5311423442616483, total=   4.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=8, score=0.49378366102094, total=   3.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=9, score=0.4661600173439316, total=   4.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=10, score=0.556522033155671, total=   4.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5917995814926761, total=   5.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=15, score=0.6104843863367739, total=   9.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6344902290772048, total=   8.6s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6593209160067961, total=   7.2s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6536916650399621, total=   7.9s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6643014297518818, total=  16.4s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6563411505469757, total=   6.8s
+[CV] NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=400, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6840607796735124, total=  18.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=3, score=0.28421164513236125, total=   6.8s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=3, score=0.29437733621876844, total=  11.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=4, score=0.350631469979296, total=   2.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=5, score=0.3783714776780777, total=   8.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=6, score=0.44456350128984395, total=   9.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=7, score=0.4901972963098282, total=   3.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=7, score=0.47870174995571024, total=   5.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=8, score=0.4530900736473894, total=   5.6s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5323184960374333, total=   7.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5580334460490586, total=   4.8s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5755410148249023, total=   7.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6245258016361362, total=  12.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6222278967994125, total=   8.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=25 [Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   5 tasks      | elapsed:    2.1s
+[Parallel(n_jobs=-1)]: Done  10 tasks      | elapsed:    5.4s
+[Parallel(n_jobs=-1)]: Done  17 tasks      | elapsed:    7.5s
+[Parallel(n_jobs=-1)]: Done  24 tasks      | elapsed:   10.2s
+[Parallel(n_jobs=-1)]: Done  33 tasks      | elapsed:   15.6s
+[Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:   20.0s
+[Parallel(n_jobs=-1)]: Done  53 tasks      | elapsed:   28.2s
+[Parallel(n_jobs=-1)]: Done  64 tasks      | elapsed:   39.3s
+[Parallel(n_jobs=-1)]: Done  77 tasks      | elapsed:   54.7s
+[Parallel(n_jobs=-1)]: Done  90 tasks      | elapsed:  1.0min
+[Parallel(n_jobs=-1)]: Done 105 tasks      | elapsed:  1.2min
+[Parallel(n_jobs=-1)]: Done 120 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done 137 tasks      | elapsed:  1.8min
+[Parallel(n_jobs=-1)]: Done 154 tasks      | elapsed:  2.2min
+[Parallel(n_jobs=-1)]: Done 173 tasks      | elapsed:  2.5min
+[Parallel(n_jobs=-1)]: Done 192 tasks      | elapsed:  2.9min
+[Parallel(n_jobs=-1)]: Done 213 tasks      | elapsed:  3.6min
+[Parallel(n_jobs=-1)]: Done 234 tasks      | elapsed:  4.6min
+[Parallel(n_jobs=-1)]: Done 257 tasks      | elapsed:  5.2min
+[Parallel(n_jobs=-1)]: Done 280 tasks      | elapsed:  5.9min
+[Parallel(n_jobs=-1)]: Done 305 tasks      | elapsed:  7.2min
+[Parallel(n_jobs=-1)]: Done 330 tasks      | elapsed:  8.0min
+[Parallel(n_jobs=-1)]: Done 357 tasks      | elapsed:  9.2min
+[Parallel(n_jobs=-1)]: Done 375 out of 375 | elapsed: 10.3min finished
+2021-03-31 22:39:26,230 - experiments.base - INFO - GMM search complete
+2021-03-31 22:40:01,669 - experiments.base - INFO - Done
+2021-03-31 22:40:01,686 - __main__ - INFO - Timings: {'ICA': 2065}
+Fitting 5 folds for each of 75 candidates, totalling 375 fits
+Fitting 5 folds for each of 75 candidates, totalling 375 fits
+[t-SNE] Computing 91 nearest neighbors...
+[t-SNE] Indexed 3430 samples in 0.004s...
+[t-SNE] Computed neighbors for 3430 samples in 1.047s...
+[t-SNE] Computed conditional probabilities for sample 1000 / 3430
+[t-SNE] Computed conditional probabilities for sample 2000 / 3430
+[t-SNE] Computed conditional probabilities for sample 3000 / 3430
+[t-SNE] Computed conditional probabilities for sample 3430 / 3430
+[t-SNE] Mean sigma: 0.010121
+[t-SNE] Computed conditional probabilities in 0.203s
+[t-SNE] Iteration 50: error = 79.8611145, gradient norm = 0.0565109 (50 iterations in 2.703s)
+[t-SNE] Iteration 100: error = 71.2533798, gradient norm = 0.0101043 (50 iterations in 1.837s)
+[t-SNE] Iteration 150: error = 70.4659729, gradient norm = 0.0021927 (50 iterations in 1.722s)
+[t-SNE] Iteration 200: error = 70.2461624, gradient norm = 0.0011418 (50 iterations in 1.751s)
+[t-SNE] Iteration 250: error = 70.1579437, gradient norm = 0.0011038 (50 iterations in 1.792s)
+[t-SNE] KL divergence after 250 iterations with early exaggeration: 70.157944
+[t-SNE] Iteration 300: error = 1.5278441, gradient norm = 0.0010283 (50 iterations in 1.555s)
+[t-SNE] Iteration 350: error = 1.2412322, gradient norm = 0.0003871 (50 iterations in 1.498s)
+[t-SNE] Iteration 400: error = 1.1353524, gradient norm = 0.0002185 (50 iterations in 1.772s)
+[t-SNE] Iteration 450: error = 1.0816469, gradient norm = 0.0001538 (50 iterations in 1.498s)
+[t-SNE] Iteration 500: error = 1.0511833, gradient norm = 0.0001211 (50 iterations in 1.576s)
+[t-SNE] Iteration 550: error = 1.0320908, gradient norm = 0.0001009 (50 iterations in 1.516s)
+[t-SNE] Iteration 600: error = 1.0188447, gradient norm = 0.0000872 (50 iterations in 1.793s)
+[t-SNE] Iteration 650: error = 1.0092065, gradient norm = 0.0000785 (50 iterations in 1.527s)
+[t-SNE] Iteration 700: error = 1.0020237, gradient norm = 0.0000730 (50 iterations in 1.552s)
+[t-SNE] Iteration 750: error = 0.9966698, gradient norm = 0.0000620 (50 iterations in 1.708s)
+[t-SNE] Iteration 800: error = 0.9923958, gradient norm = 0.0000619 (50 iterations in 1.660s)
+[t-SNE] Iteration 850: error = 0.9892302, gradient norm = 0.0000553 (50 iterations in 1.628s)
+[t-SNE] Iteration 900: error = 0.9865910, gradient norm = 0.0000509 (50 iterations in 1.729s)
+[t-SNE] Iteration 950: error = 0.9841024, gradient norm = 0.0000502 (50 iterations in 1.690s)
+[t-SNE] Iteration 1000: error = 0.9818363, gradient norm = 0.0000471 (50 iterations in 1.641s)
+[t-SNE] KL divergence after 1000 iterations: 0.981836
+
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5372643128397604, total=   6.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5809087034023096, total=   6.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=15, score=0.6171368383623603, total=   8.5s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6330403447756581, total=  11.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=25, score=0.635216331156362, total=   8.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6763234066103199, total=  14.2s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=35, score=0.7056256987012363, total=  13.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=35, score=0.7010450522743914, total=  22.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6779219763580568, total=  10.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=2, score=0.19407563025210084, total=   6.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=3, score=0.28695652173913044, total=   4.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3738929227539148, total=   4.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=4, score=0.37052736863726665, total=  10.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=6, score=0.44309291305454984, total=   6.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=6, score=0.4139816710933257, total=   7.0s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=7, score=0.46083367132969094, total=   6.0s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5276257202207276, total=  23.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5445275333896169, total=   8.5s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5682453857024001, total=   8.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5842474717454678, total=   7.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6438126573905184, total=   7.5s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6317228813354324, total=   9.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6440558569327803, total=  13.5s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6715819562808144, total=  19.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6655186618431819, total=  10.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6565570233484499, total=  12.5s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=40, score=0.7083795963411251, total=  14.2s
+/Users/dennis/miniconda3/lib/python3.7/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:47: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+/Users/dennis/miniconda3/lib/python3.7/site-packages/scipy/linalg/basic.py:1321: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
+  x, resids, rank, s = lstsq(a, b, cond=cond, check_finite=False)
+
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5209622049515931, total=   4.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5338633318940225, total=   7.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5455520240342929, total=   6.6s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5631486548595377, total=   5.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5823972648465912, total=   6.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6481829884990794, total=   9.3s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6447921380877687, total=  15.8s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=25, score=0.668964464236251, total=   9.5s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6610110313780582, total=   9.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6451279302568882, total=   9.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=40, score=0.7072107004578817, total=  23.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=2, score=0.20144866642309098, total=   3.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=2, score=0.203030303030303, total=   7.1s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=3, score=0.28127046866177297, total=   6.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=3, score=0.2897511703728064, total=   5.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3769157228108635, total=   6.5s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=5, score=0.3965612507876836, total=   4.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=5, score=0.37218858211681816, total=  10.5s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=7, score=0.4991931297932522, total=   5.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=7, score=0.500052009422548, total=   7.5s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5053928765181962, total=  12.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5190620916663974, total=   7.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5441234526057215, total=   9.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5485394099735437, total=   6.5s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=15, score=0.588794466403162, total=   6.1s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=15, score=0.6081797331322085, total=  10.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6297850940905488, total=  13.0s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6680339463694428, total=  20.0s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6536608971946988, total=  12.5s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6531292271960836, total=  11.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6893968554409461, total=  13.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6907151805962738, total=  13.4s
+/Users/dennis/miniconda3/lib/python3.7/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:47: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+/Users/dennis/miniconda3/lib/python3.7/site-packages/scipy/linalg/basic.py:1321: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
+  x, resids, rank, s = lstsq(a, b, cond=cond, check_finite=False)
+
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=15, score=0.6071452670320862, total=   7.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=20, score=0.619510314328711, total=  12.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6585368765331663, total=  11.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6671903889185355, total=  16.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6932040787991636, total=  15.7s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=40, score=0.7024508790322341, total=  17.1s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=40, score=0.7130875980402643, total=  10.5s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=2, score=0.2014705882352941, total=   6.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=3, score=0.29288479890533564, total=   5.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=4, score=0.37520264964985545, total=   6.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=5, score=0.37915235659481183, total=   5.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=6, score=0.46893510953343087, total=   9.0s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=6, score=0.4068936367039203, total=   7.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=7, score=0.4740644162621869, total=   7.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=8, score=0.5209609036228496, total=  13.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5337058419649104, total=  12.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5352210192098885, total=   8.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=15, score=0.577820883294029, total=   8.8s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6201773408801253, total=  12.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6404430941223564, total=  16.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6777746195065456, total=  19.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=30, score=0.684476299679758, total=  17.0s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=35, score=0.695246096741497, total=  13.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6947849565335951, total=  13.5s
+/Users/dennis/miniconda3/lib/python3.7/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:47: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+/Users/dennis/miniconda3/lib/python3.7/site-packages/scipy/linalg/basic.py:1321: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
+  x, resids, rank, s = lstsq(a, b, cond=cond, check_finite=False)
+
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6579142663904278, total=   9.4s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=30, score=0.665864703059869, total=  12.0s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6861000399760563, total=  11.9s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6623572240257357, total=  19.5s
+[CV] NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=800, NN__learning_rate=adaptive, gmm__n_components=40, score=0.6882474014033106, total=  15.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=2 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=2, score=0.19999999999999996, total=   7.1s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=3 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=3, score=0.29550957921441695, total=   5.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=4 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=4, score=0.3608695652173913, total=   4.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=5, score=0.4413160361845568, total=   5.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=5 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=5, score=0.3797567871555351, total=  11.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=6 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=6, score=0.4595834666917233, total=   5.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=7 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=7, score=0.41623110904440824, total=  11.4s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=8 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=8, score=0.4501281932430538, total=  13.1s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=9, score=0.5323099021939122, total=   4.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=9 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=9, score=0.46769396252485923, total=   7.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5283768448090698, total=   6.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=10 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=10, score=0.5631706039376765, total=   6.9s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=15 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=15, score=0.5988679561077164, total=   8.2s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=20 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=20, score=0.6178476373445398, total=   8.7s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6560393953272452, total=  10.1s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=25 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=25, score=0.6648331471559321, total=  15.6s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=30 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=30, score=0.6583581098529161, total=  16.3s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=35 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=35, score=0.6991140569741495, total=  26.0s
+[CV] NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=40 
+[CV]  NN__hidden_layer_sizes=1600, NN__learning_rate=adaptive, gmm__n_components=40, score=0.7203552877248339, total=  15.9s
+/Users/dennis/miniconda3/lib/python3.7/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:47: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+/Users/dennis/miniconda3/lib/python3.7/site-packages/scipy/linalg/basic.py:1321: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
+  x, resids, rank, s = lstsq(a, b, cond=cond, check_finite=False)
+/Users/dennis/miniconda3/lib/python3.7/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:47: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp

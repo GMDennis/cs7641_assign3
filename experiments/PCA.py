@@ -17,7 +17,8 @@ class PCAExperiment(experiments.BaseExperiment):
     def __init__(self, details, verbose=False):
         super().__init__(details)
         self._verbose = verbose
-        self._nn_arch = [100, 200, 400, 800,  1600]
+        self._nn_arch = [(50, 50), (50,), (25,), (25, 25), (100, 25, 100)]
+        self._nn_reg = [10 ** -x for x in range(1, 5)]
         self._clusters = [2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 35, 40]
         self._dims = [2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
 
@@ -31,8 +32,7 @@ class PCAExperiment(experiments.BaseExperiment):
         # %% Data for 1
         pca = PCA(random_state=self._details.seed)
         pca.fit(self._details.ds.training_x)
-        #tmp = pd.Series(data=pca.explained_variance_, index=range(1, min(pca.explained_variance_.shape[0], 500) + 1))
-        tmp = pd.Series(data=pca.explained_variance_, index=range(1, min(pca.explained_variance_.shape[0],  800) + 1))
+        tmp = pd.Series(data=pca.explained_variance_, index=range(1, min(pca.explained_variance_.shape[0], 500) + 1))
         tmp.to_csv(self._out.format('{}_scree.csv'.format(self._details.ds_name)))
 
         # If the ds is small or the number of components is too large, the full solver is used for PCA and as a result
@@ -44,7 +44,7 @@ class PCAExperiment(experiments.BaseExperiment):
             self.log("Must use full solver, new dims are {}".format(self._dims))
 
         # %% Data for 2
-        grid = {'pca__n_components': self._dims, 'NN__learning_rate': ["adaptive"], 'NN__hidden_layer_sizes': self._nn_arch}
+        grid = {'pca__n_components': self._dims, 'NN__alpha': self._nn_reg, 'NN__hidden_layer_sizes': self._nn_arch}
         pca = PCA(random_state=self._details.seed)
         mlp = MLPClassifier(activation='relu', max_iter=2000, early_stopping=True, random_state=self._details.seed)
         pipe = Pipeline([('pca', pca), ('NN', mlp)], memory=experiments.pipeline_memory)

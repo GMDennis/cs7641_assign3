@@ -44,8 +44,6 @@ if __name__ == '__main__':
     parser.add_argument('--skiprerun', action='store_true',
                         help='If true, do not re-run the main experiment before clustering '
                              '(This MUST be used with --dim and a specific experiment)')
-    parser.add_argument('--dataset1', action='store_true', help='Run only data set 1')
-    parser.add_argument('--dataset2', action='store_true', help='Run only data set 2')
     parser.add_argument('--benchmark', action='store_true', help='Run the benchmark experiments')
     parser.add_argument('--ica', action='store_true', help='Run the ICA experiments')
     parser.add_argument('--pca', action='store_true', help='Run the PCA experiments')
@@ -71,11 +69,6 @@ if __name__ == '__main__':
         parser.print_help()
         sys.exit(1)
 
-    if args.dataset1 and args.dataset2:
-        logger.error("Can only specify one of '--dataset1' or '--dataset2', not both")
-        parser.print_help()
-        sys.exit(1)
-
     seed = args.seed
     if seed is None:
         seed = np.random.randint(0, (2 ** 32) - 1, dtype='uint64')
@@ -91,31 +84,10 @@ if __name__ == '__main__':
             'data': loader.CreditApprovalData(verbose=verbose, seed=seed),
             'name': 'credit_approval',
             'readable_name': 'Credit Approval',
-            'best_nn_params': {'NN__activation': ['relu'],
-                               'NN__hidden_layer_sizes': [100, 200, 400, 800, 1600], 'NN__learning_rate': ["adaptive"]}
+            'best_nn_params': {'NN__activation': ['relu'], 'NN__alpha': [1.0],
+                               'NN__hidden_layer_sizes': [(36, 36)], 'NN__learning_rate_init': [0.016]}
         }
-#    dataset2_details = {
-#            'data': loader.PenDigitData(verbose=verbose, seed=seed),
-#            'name': 'pendigit',
-#            'readable_name': 'Pen Digit',
-#            'best_nn_params': {'NN__activation': ['relu'],
-#                               'NN__hidden_layer_sizes': [100, 200, 400, 800, 1600], 'NN__learning_rate': ["adaptive"]}
-#    }
-    dataset2_details = {
-            'data': loader.FMNISTData(verbose=verbose, seed=seed),
-            'name': 'fmnist',
-            'readable_name': 'Fashion MNIST',
-            'best_nn_params': {'NN__activation': ['relu'],
-                               'NN__hidden_layer_sizes': [100, 200, 400, 800, 1600], 'NN__learning_rate': ["adaptive"]}
-    }
-
-    if args.dataset1:
-        datasets.append(dataset1_details)
-    elif args.dataset2:
-        datasets.append(dataset2_details)
-    elif not args.dataset1 and not args.dataset2:
-        datasets.append(dataset1_details)
-        datasets.append(dataset2_details)
+    datasets.append(dataset1_details)
 
     experiment_details = []
     for ds in datasets:
@@ -146,13 +118,6 @@ if __name__ == '__main__':
         if args.pca or args.all:
             run_experiment(experiment_details, experiments.PCAExperiment, 'PCA', args.dim, args.skiprerun,
                            verbose, timings)
-        # NOTE: These were experimented with but ultimately were not used for this assignment.
-        # if args.lda or args.all:
-        #     run_experiment(experiment_details, experiments.LDAExperiment, 'LDA', args.dim, args.skiprerun,
-        #                    verbose, timings)
-        # if args.svd or args.all:
-        #     run_experiment(experiment_details, experiments.SVDExperiment, 'SVD', args.dim, args.skiprerun,
-        #                    verbose, timings)
         if args.rf or args.all:
             run_experiment(experiment_details, experiments.RFExperiment, 'RF', args.dim, args.skiprerun,
                            verbose, timings)

@@ -20,7 +20,8 @@ class ICAExperiment(experiments.BaseExperiment):
     def __init__(self, details, verbose=False):
         super().__init__(details)
         self._verbose = verbose
-        self._nn_arch = [100, 200, 400, 800, 1600]
+        self._nn_arch = [(50, 50), (50,), (25,), (25, 25), (100, 25, 100)]
+        self._nn_reg = [10 ** -x for x in range(1, 5)]
         self._clusters = [2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 35, 40]
         self._dims = [2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
 
@@ -45,7 +46,7 @@ class ICAExperiment(experiments.BaseExperiment):
         kurt.to_csv(self._out.format('{}_scree.csv'.format(self._details.ds_name)))
 
         # %% Data for 2
-        grid = {'ica__n_components': self._dims, 'NN__learning_rate': ["adaptive"], 'NN__hidden_layer_sizes': self._nn_arch}
+        grid = {'ica__n_components': self._dims, 'NN__alpha': self._nn_reg, 'NN__hidden_layer_sizes': self._nn_arch}
         ica = FastICA(random_state=self._details.seed)
         mlp = MLPClassifier(activation='relu', max_iter=2000, early_stopping=True, random_state=self._details.seed)
         pipe = Pipeline([('ica', ica), ('NN', mlp)], memory=experiments.pipeline_memory)
